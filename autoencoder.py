@@ -3,5 +3,6 @@ from torchvision import datasets
 from torchvision import transforms
 import matplotlib.pyplot as plt
 
-# Transforms images to a PyTorch Tensor
-tensor_transform = transforms.ToTensor()
+#  use gpu if available
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("Device:", device)
