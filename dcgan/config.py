@@ -1,0 +1,12 @@
+EPOCHS = 100
+DATA = "../data/pokemon"
+WORKERS = 2
+BATCH_SIZE = 32
+IMG_SIZE = 64
+NC = 3
+NZ = 100
+NGF = 64
+NDF = 64
+LR = 0.0002
+BETA1 = 0.5
+NGPU = 1

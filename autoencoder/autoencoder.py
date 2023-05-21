@@ -3,8 +3,8 @@ import torch
 from torch import nn, optim
 from config import EPOCHS
 
-from model import AE
-from utils import get_data_loader
+from autoencoder.model import AE
+from autoencoder.utils import get_data_loader
 
 #  use gpu if available
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -19,8 +19,7 @@ data_loader = get_data_loader()
 outputs = []
 losses = []
 for epoch in range(EPOCHS):
-    for (image, _) in data_loader:
-
+    for image, _ in data_loader:
         image = image.view(-1, 64 * 64).to(device)
 
         # Output of Autoencoder
